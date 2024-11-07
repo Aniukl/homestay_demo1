@@ -1,24 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
-
+import NavBar from "./components/NavBar";
+import styles from "./App.module.css";
+import Corousal from "./components/Corousal";
 function App() {
+  const img1=require('./images/img_1.jpg')
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+    <div>
+      <NavBar />
+      <div className={styles.BasicStyle}>
+        <Corousal />
+      </div>
+      <img src={img1} width="100" height="100" alt="Test"></img>
     </div>
+
   );
 }
 
